@@ -708,14 +708,3 @@ python train.py --denoiser bf
 python train.py --denoiser ngm
 ```
 
-### Inference
-
-```bash
-python inference.py \
-    --checkpoint checkpoints/vox_uda_epoch0300.pt \
-    --volume_dir data/target/test/volumes \
-    --output_dir results/predictions \
-    --use_teacher \
-    --denoised \
-    --mask_dir data/target/test/masks   # optional, for computing metrics
-```
