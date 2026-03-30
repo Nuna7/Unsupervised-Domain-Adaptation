@@ -8,6 +8,7 @@ from typing import List
 
 @dataclass
 class VoxUDAConfig:
+    BASE = "/shared/scratch/0/home/v_zonunmawia_zadeng/UDA/"
     # ---- Model ----
     in_channels:       int   = 1
     num_classes:       int   = 2
@@ -54,17 +55,17 @@ class VoxUDAConfig:
 
     # ---- Hardware ----
     device:            str   = "cuda"
-    num_workers:       int   = 4
+    num_workers:       int   = 0
 
     # ---- Evaluation ----
     eval_every:        int   = 10     # evaluate on target val set every N epochs
     save_every:        int   = 50     # save checkpoint every N epochs
 
     # ---- Paths ----
-    source_volume_dir: str   = "data/source/volumes"
-    source_mask_dir:   str   = "data/source/masks"
-    target_volume_dir: str   = "data/target/volumes"
-    target_eval_dir:   str   = "data/target/eval"    # for evaluation only
-    target_mask_dir:   str   = "data/target/masks"   # eval masks
-    checkpoint_dir:    str   = "checkpoints"
-    log_dir:           str   = "logs"
+    source_volume_dir: str   = BASE + "data/source/volumes"
+    source_mask_dir:   str   = BASE + "data/source/masks"
+    target_volume_dir: str   = BASE + "data/target/volumes"
+    target_eval_dir:   str   = BASE + "data/target/eval"    # for evaluation only
+    target_mask_dir:   str   = BASE + "data/target/masks"   # eval masks
+    checkpoint_dir:    str   = BASE + "checkpoints"
+    log_dir:           str   = BASE + "logs"

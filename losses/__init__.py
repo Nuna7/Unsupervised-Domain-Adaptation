@@ -1,7 +1,6 @@
 from .losses import (
     DiceLoss,
     SegmentationLoss,
-    cosine_consistency_loss,
     ConsistencyLoss,
     DiscriminatorLoss,
     generate_pseudo_labels,
@@ -14,7 +13,6 @@ from .losses import (
 __all__ = [
     "DiceLoss",
     "SegmentationLoss",
-    "cosine_consistency_loss",
     "ConsistencyLoss",
     "DiscriminatorLoss",
     "generate_pseudo_labels",
